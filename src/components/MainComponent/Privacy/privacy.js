@@ -26,7 +26,7 @@ import axios from 'axios';
 import {useRecoilState} from 'recoil';
 import {selectedCareer, selectJob, getJobData} from '../../../state/atoms'
 
-const privacy = () => {
+const Privacy = () => {
     const [jobData, setJobData] = useRecoilState(getJobData);
 
     const [inputValue, setInputValue] = useState("")
@@ -284,4 +284,4 @@ const privacy = () => {
     );
 };
 
-export default privacy;
+export default Privacy;

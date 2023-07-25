@@ -3,7 +3,7 @@ import {Wrapper, StyledH1, InputContainer, PureMaterialTextfieldOutlined, PureMa
 import axios from "axios";
 import {inputResume, outputResume} from '../../../state/atoms'
 import {useRecoilState, useRecoilValue} from 'recoil';
-const resume = (props) => {
+const Resume = (props) => {
 
     const {onClickCopy,onUpload} = props
 
@@ -40,4 +40,4 @@ const resume = (props) => {
     );
 };
 
-export default resume;
+export default Resume;

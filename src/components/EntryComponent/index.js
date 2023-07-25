@@ -27,8 +27,6 @@ const EntryComponent = () => {
                 </MenuButton>
                 <PrimaryNav>
                     <NavItem><p onClick={goToMain}>Home</p></NavItem>
-                    <NavItem><p>Login</p></NavItem>
-                    <NavItem><p>Sign Up</p></NavItem>
                 </PrimaryNav>
             </PrimaryHeader>
             <main>

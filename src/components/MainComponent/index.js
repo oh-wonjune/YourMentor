@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import { GlobalStyle,NavLeft,NavRight, StyledUl, Logo} from './styles'; // Assuming that the styles are in styles.js file
 import Loading from '../Loading';
-import Resume from './Resume/resume';
+import Resume from './Resume/Resume';
 import Interview from './Interview/Interview'
-import Privacy from './Privacy/privacy'
+import Privacy from './Privacy/Privacy'
 //import Privacy from './Privacy/test'
 import axios from 'axios';
 
