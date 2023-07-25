@@ -296,3 +296,30 @@ export const PureMaterialButtonOutlined = styled.button`
     opacity: 0;
   }
 `;
+
+export const Top = styled.div`
+  display: flex;
+  align-items: center;
+  height: 90px;
+  width: 100%;
+  padding-left: 13px;
+  box-shadow: 0 9.5px 12.7px 0 rgba(0, 0, 0, 0.05);
+
+  @media only screen and (max-width: 500px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+  }
+`;
+
+export const InfoBot = styled.div`
+  margin-left: 17px;
+`;
+
+export const TitleBot = styled.p`
+  font-size: 24px;
+  font-weight: 600;
+  white-space: nowrap;
+`;

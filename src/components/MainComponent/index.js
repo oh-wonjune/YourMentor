@@ -3,14 +3,23 @@ import { GlobalStyle,NavLeft,NavRight, StyledUl, Logo} from './styles'; // Assum
 import Loading from '../Loading';
 import Resume from './Resume/resume';
 import Interview from './Interview/Interview'
-//import Interview2 from './Interview/test'
+import Privacy from './Privacy/privacy'
+//import Privacy from './Privacy/test'
 import axios from 'axios';
+
+import {useRecoilState, useRecoilValue} from 'recoil';
+import {inputResume, selectedCareer, selectJob,outputResume} from '../../state/atoms'
+// import { inputResume,outputResume } from '../../state/atoms';
 
 const MainComponent = () => {
     const [tabIndex, setTabIndex] = useState(0)
-    const [inputText, setInputText] = useState("")
-    const [outputText, setOutputText] = useState("")
+    //const [inputText, setInputText] = useState("")
+    const [outputText, setOutputText] = useRecoilState(outputResume)
     const [isLoading, setIsLoading] = useState(false)
+
+    const inputText = useRecoilValue(inputResume)
+    const selectCareer = useRecoilValue(selectedCareer);
+    const selectedJob = useRecoilValue(selectJob);
 
     const onTabChange=(idx)=>{
         setTabIndex(idx)
@@ -18,9 +27,9 @@ const MainComponent = () => {
 
     const onUpload= async()=>{
         setIsLoading(true)
-
         const messages = [
-            {"role": "system", "content": "해당 이력서의 맞춤법을 수정하고 전문적인 지식으로 보완하여 다시 말씀해주세요. 또한, 부가 설명 없이 한글로 답변해 주세요."},
+            {"role": "system", "content": "해당 이력서의 맞춤법을 수정하고 전문적인 지식으로 보완하여 다시 말씀해주세요. 또한, 부가 설명 없이 " +
+                    "한글로 답변해 주세요. 참고로 저의 경력은"+selectCareer+"정도이고 " + selectedJob + "를 목표로 하고 있어"},
             {"role": "user", "content": inputText}
         ]
 
@@ -66,10 +75,12 @@ const MainComponent = () => {
                     </StyledUl>
                 </NavLeft>
 
-                <NavRight>
+                <NavRight style={tabIndex === 0?{overflowY:"scroll"}:{overflowY:"hidden"}}>
+                    {tabIndex === 0&&
+                        <Privacy/>
+                    }
                     {tabIndex === 1&&
                         <Resume
-                            setInputText={setInputText}
                             outputText={outputText}
                             onClickCopy={onClickCopy}
                             onUpload={onUpload}
