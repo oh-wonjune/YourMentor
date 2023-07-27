@@ -4,6 +4,7 @@ import Loading from '../Loading';
 import Resume from './Resume/Resume';
 import Interview from './Interview/Interview'
 import Privacy from './Privacy/Privacy'
+import Alert from '../Alert/Alert'
 //import Privacy from './Privacy/test'
 import axios from 'axios';
 
@@ -13,23 +14,40 @@ import {inputResume, selectedCareer, selectJob,outputResume} from '../../state/a
 
 const MainComponent = () => {
     const [tabIndex, setTabIndex] = useState(0)
-    //const [inputText, setInputText] = useState("")
     const [outputText, setOutputText] = useRecoilState(outputResume)
     const [isLoading, setIsLoading] = useState(false)
-
+    const [isAlert, setIsAlert] = useState(false)
     const inputText = useRecoilValue(inputResume)
     const selectCareer = useRecoilValue(selectedCareer);
     const selectedJob = useRecoilValue(selectJob);
 
     const onTabChange=(idx)=>{
-        setTabIndex(idx)
+        switch(idx){
+            case 1:
+                if(selectedJob !==""){
+                    setTabIndex(idx)
+                } else{
+                    setIsAlert(true)
+                }
+                break;
+            case 2:
+                if(outputText !==""){
+                    setTabIndex(idx)
+                } else{
+                    setIsAlert(true)
+                }
+                break;
+            default:
+                setTabIndex(idx)
+        }
+
     }
 
     const onUpload= async()=>{
         setIsLoading(true)
         const messages = [
-            {"role": "system", "content": "해당 이력서의 맞춤법을 수정하고 전문적인 지식으로 보완하여 다시 말씀해주세요. 또한, 부가 설명 없이 " +
-                    "한글로 답변해 주세요. 참고로 저의 경력은"+selectCareer+"정도이고 " + selectedJob + "를 목표로 하고 있어"},
+            {"role": "system", "content": "해당 이력서의 맞춤법을 수정하고 전문적인 지식으로 보완하여 다시 말씀해주세요. 또한, 다른 말 말고 수정된 이력서만 한글로 출력해줘" +
+                    " 참고로 저의 경력은"+selectCareer+"정도이고 " + selectedJob + "를 목표로 하고 있어"},
             {"role": "user", "content": inputText}
         ]
 
@@ -46,6 +64,10 @@ const MainComponent = () => {
     const onClickCopy = async() => {
         await navigator.clipboard.writeText(outputText);
     };
+
+    const onClickAlert = ()=>{
+        setIsAlert(false)
+    }
 
     return (
         <>
@@ -95,6 +117,12 @@ const MainComponent = () => {
                     <Loading/>
                 }
             </div>
+            {isAlert&&
+                <Alert
+                    isAlert={isAlert}
+                    onClickAlert={onClickAlert}
+                />
+            }
         </>
     );
 }

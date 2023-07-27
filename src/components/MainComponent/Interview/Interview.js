@@ -1,14 +1,16 @@
 import React, { useRef, useState, useEffect } from "react";
 import {Container, Top, InfoBot, TitleBot, ContentChat, BoxSentMSG, UserResponse, By, InputMSG,BotResponse, SendIcon} from "./styles"
 import axios from "axios";
+import {useRecoilValue} from "recoil";
+import {outputResume} from "../../../state/atoms";
 
 const Interview = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [inputText, setInputText] = useState("")
-  const [outputText, setOutputText] = useState("")
   const [messages, setMessages] = useState([]);
+  const outputText = useRecoilValue(outputResume)
   const [messageList, setMessageList] = useState([
-      {"role": "system", "content": "면접 질문을하는 면접관 역활을 해줘 사용자는 면접자입니다. 한글로 대화를 해줘. 한번에 여러개 질문은 하지말고 하나씩 질문해줘. 진짜 면접처럼 대화식으로 해줘"},
+      {"role": "system", "content": "면접 질문을하는 면접관 역활을 해줘 사용자는 면접자입니다. 한글로 대화를 해줘. 한번에 여러개 질문은 하지말고 하나씩 질문해줘. 진짜 면접처럼 대화식으로 해줘 해당 자기소개서를 기반으로 질문해줘. 자기소개서 :"+outputText},
       {"role": "assistant", "content": "안녕하세요 지원자님 이제부터 면접을 진행하겠습니다. 간단한 자기소개를 해주실까요?"}
   ])
   const contentChatRef = useRef();
