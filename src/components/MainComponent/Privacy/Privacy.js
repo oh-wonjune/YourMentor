@@ -61,7 +61,6 @@ const Privacy = () => {
         try {
             const response = await axios.get('/api/getjobs', {
                 params: {
-                    apiKey: "b0b5932a9e672bf346459bf5796857c1", // 실제 API Key로 변경해주세요
                     searchJobCd: jobData.jobType,
                     pageIndex: page,
                 }
@@ -86,7 +85,6 @@ const Privacy = () => {
         try {
             const response = await axios.get('/api/getjobs', {
                 params: {
-                    apiKey: "b0b5932a9e672bf346459bf5796857c1", // 실제 API Key로 변경해주세요
                     searchJobCd: type,
                     pageIndex: 1,
                 }

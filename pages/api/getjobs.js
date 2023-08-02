@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 export default async function handler(req, res) {
-    const { apiKey, pageIndex = 1, searchJobCd } = req.query;
+    const {pageIndex = 1, searchJobCd } = req.query;
+    const apiKey = process.env.JOB_API_KEY;
 
     try {
         const response = await axios.get('https://www.career.go.kr/cnet/front/openapi/jobs.json', {
