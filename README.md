@@ -36,22 +36,27 @@ YourMentor 프로젝트에서는 취업 및 이직을 준비하는 사람들을 
 - GPT API를 활용하여 사용자의 자기소개서를 첨삭하는 기능을 구현하였습니다.
 - 사용자의 자기소개서를 기반으로 GPT를 활용하여 모의 면접을 진행하는 서비스를 제공하였습니다.
 
+<img width="1440" alt="스크린샷 2023-07-27 오후 8 23 04" src="https://github.com/oh-wonjune/YourMentor/assets/55135292/d54f65a9-3066-4f0d-b0ff-0324b40b025a">
 
-![스크린샷 2023-07-27 오후 8.23.04.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c37405fb-4d93-4a16-9e50-1938c1f0a749/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-07-27_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.23.04.png)
 
 ### 첫 번째 탭에서는 자신의 경력과 원하는 직업을 선택할 수 있습니다.
 
-![스크린샷 2023-07-27 오후 8.23.50.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5fa6791c-167b-45b3-bea0-e1695e4cb192/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-07-27_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.23.50.png)
+
+<img width="1440" alt="스크린샷 2023-07-27 오후 8 23 50" src="https://github.com/oh-wonjune/YourMentor/assets/55135292/021c807f-f113-4739-afed-6d18a44214db">
+
 
 ### 직업 데이터는 “직업 정보망 커리어넷”의 openAPI를 사용했습니다.
 
-![스크린샷 2023-07-27 오후 8.27.25.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/23c79175-2143-41c5-977c-666a6f65321c/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-07-27_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.27.25.png)
+
+<img width="1440" alt="스크린샷 2023-07-27 오후 8 27 25" src="https://github.com/oh-wonjune/YourMentor/assets/55135292/2e60bbc6-c0a3-4e6a-b2f2-138a2252c64f">
+
 
 ### 직업을 선택하면 두번째 탭인 이력서 첨삭 탭으로 이동이 가능해집니다.
 
 ### 해당 탭에서는 자신의 이력서를 입력 및 붙여넣기 후 UPLOAD 버튼을 클릭하면 로딩 후 우측 변환된 내용에 첨삭된 내용이 출력됩니다. COPY 버튼을 클릭하여 복사 할 수 있습니다.
 
-![스크린샷 2023-07-27 오후 8.27.53.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8872e9c2-b935-450b-9dc5-b4c5e6940026/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-07-27_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.27.53.png)
+
+<img width="1438" alt="스크린샷 2023-07-27 오후 8 27 53" src="https://github.com/oh-wonjune/YourMentor/assets/55135292/41c89b0d-0d9f-46aa-b2f1-e393f2a2f1b8">
 
 ### 이력서 첨삭을 완료하면 3번째 탭인 모의면접 탭으로 이동이 가능해집니다.
 
