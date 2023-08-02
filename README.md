@@ -1,34 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## YourMentor
 
-## Getting Started
+[](http://www.yourmentor.co.kr)
 
-First, run the development server:
+## **📝 소개**
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+YourMentor 프로젝트에서는 취업 및 이직을 준비하는 사람들을 대상으로 자기소개서 첨삭 서비스와 모의 면접 진행 서비스를 제공하는 웹 플랫폼을 개발하였습니다. 이 프로젝트에서는 GPT API를 활용하였으며, Next.js와 React를 사용하여 개발을 진행하였습니다.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## **🛠️ 기술 스택**
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Next.js
+- React
+- Styled-components
+- Recoil
+- Amazon Linux2
+- PM2
+- Jenkins
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## **📌 주요 경험**
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### **웹 애플리케이션 개발**
 
-## Learn More
+- Next.js와 React를 사용하여 웹 애플리케이션 개발을 진행하였습니다.
+- Styled-components를 활용하여 UI 디자인을 구성하였습니다.
+- Recoil을 사용하여 전역 상태 관리를 수행하였습니다.
 
-To learn more about Next.js, take a look at the following resources:
+### **서버 설정 및 CI/CD 구축**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Amazon Linux2 서버를 사용하여 웹 애플리케이션을 호스팅하였습니다.
+- PM2를 사용하여 서버 인스턴스 내에서 애플리케이션 서버가 지속적으로 실행되도록 설정하였습니다.
+- Jenkins를 활용하여 CI/CD 파이프라인을 구축하였습니다.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### **API 활용**
 
-## Deploy on Vercel
+- 진로정보망 커리어넷의 직업백과 API를 사용하여 직업 정보를 불러왔습니다.
+- GPT API를 활용하여 사용자의 자기소개서를 첨삭하는 기능을 구현하였습니다.
+- 사용자의 자기소개서를 기반으로 GPT를 활용하여 모의 면접을 진행하는 서비스를 제공하였습니다.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![스크린샷 2023-07-27 오후 8.23.04.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c37405fb-4d93-4a16-9e50-1938c1f0a749/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-07-27_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.23.04.png)
+
+### 첫 번째 탭에서는 자신의 경력과 원하는 직업을 선택할 수 있습니다.
+
+![스크린샷 2023-07-27 오후 8.23.50.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5fa6791c-167b-45b3-bea0-e1695e4cb192/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-07-27_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.23.50.png)
+
+### 직업 데이터는 “직업 정보망 커리어넷”의 openAPI를 사용했습니다.
+
+![스크린샷 2023-07-27 오후 8.27.25.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/23c79175-2143-41c5-977c-666a6f65321c/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-07-27_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.27.25.png)
+
+### 직업을 선택하면 두번째 탭인 이력서 첨삭 탭으로 이동이 가능해집니다.
+
+### 해당 탭에서는 자신의 이력서를 입력 및 붙여넣기 후 UPLOAD 버튼을 클릭하면 로딩 후 우측 변환된 내용에 첨삭된 내용이 출력됩니다. COPY 버튼을 클릭하여 복사 할 수 있습니다.
+
+![스크린샷 2023-07-27 오후 8.27.53.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8872e9c2-b935-450b-9dc5-b4c5e6940026/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-07-27_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.27.53.png)
+
+### 이력서 첨삭을 완료하면 3번째 탭인 모의면접 탭으로 이동이 가능해집니다.
+
+### 해당 탭에서는 앞서 이력서 첨삭 탭에서 첨삭한 이력서를 기반으로 면접이 이루어 집니다.
+
+### 첫 번째로 면접관이 간단한 자기소개를 요구 하고 자기 소개를 시작으로 면접이 진행됩니다.
